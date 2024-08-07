@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML LIST</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <form>
+            <h2>Internship Registration Form</h2><br>
+            <div class="input-group">
+                <label for="fname">First name:</label><br>
+                <input type="text" id="fname" name="fname"><br>
+                <label for="lname">Last name:</label><br>
+                <input type="text" id="lname" name="lname"><br>
+            </div><br>
+            <div class="input-group">
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email"><br>
+            </div><br>  
+            <div class="input-group">
+                <p>Branch:</p>
+                <input type="radio" id="BBA" name="Branch" value="BBA">
+                <label for="BBA">BBA</label><br>
+                <input type="radio" id="BCA" name="Branch" value="BCA">
+                <label for="BCA">BCA</label><br>
+                <input type="radio" id="BTECH" name="Branch" value="BTECH">
+                <label for="BTECH">BTECH</label><br>
+                <input type="radio" id="IT" name="Branch" value="IT">
+                <label for="IT">IT</label><br>
+                <input type="radio" id="CSE" name="Branch" value="CSE">
+                <label for="CSE">CSE</label><br>
+            </div><br>
+            <div class="input-group">
+                <label for="roll_no">Roll No.:</label><br>
+                <input type="text" id="roll_no" name="roll_no" required><br>
+            </div><br>
+            <div class="input-group">
+                <label for="birthday">Date of Birth:</label><br>
+                <input type="date" id="birthday" name="birthday"><br>
+            </div><br>
+            <div class="input-group">
+                <label for="contact">Contact:</label><br>
+                <input type="text" id="contact" name="contact" required><br>
+            </div><br>
+            <div class="input-group">
+                <label for="section">Section:</label><br>
+                <input type="text" id="section" name="section" required><br>
+            </div><br>
+            <div class="input-group">
+                <label for="myfile">Select a Resume file:</label><br>
+                <input type="file" id="myfile" name="myfile"><br>
+            </div><br>
+            <div class="input-group">
+                <button type="submit">Submit</button>
+            </div><br>
+            <input type="reset" value="Reset">
+        </form>
+        <div id="thankYouMessage" style="display: none;">
+            <h3>Thank you for Registration</h3>
+        </div>
+    </div>
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form from submitting the default way
+            document.getElementById('registrationForm').style.display = 'none'; // Hide the form
+            document.getElementById('thankYouMessage').style.display = 'block'; // Show the thank you message
+        });
+    </script>
+</body>
+</html>
